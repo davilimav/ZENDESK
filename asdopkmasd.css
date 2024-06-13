@@ -17,6 +17,25 @@ header {
     text-align: center;
 }
 
+.product {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+#cart {
+    float: right;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
 button {
     background-color: #008CBA; /* Blue */
     border: none;
@@ -46,6 +65,26 @@ button:hover {
 }
 
 /* CABEÇALHO */
+
+main {
+    padding-top: 100px;
+    position: relative;
+}
+
+.gradient-overlay {
+    position: relative;
+    z-index: 1;
+}
+
+main .gradient-overlay:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) -35%, rgb(0, 0, 0) 100%);
+    height: 100%;
+}
 
 img {
     height: 60%;
@@ -100,6 +139,15 @@ header a:hover {
 .logo img {
     margin-top: 20px;
     margin-left: 20px;
+}
+
+.home{
+    color: aliceblue;
+    position: absolute;
+    top: 35%; /* Ajuste a posição verticalmente conforme necessário */
+    left: 20%; /* Ajuste a posição horizontalmente conforme necessário */
+    transform: translate(-50%, -50%); /* Centraliza vertical e horizontalmente */
+    z-index: 2;
 }
 
 .button{
@@ -218,38 +266,4 @@ form {
 .d-block {
     height:900px;
     width: auto;
-}
-
-
-/* COMPRA */
-
-main {
-    margin-top: 130px;
-    display: flex;
-    /* justify-content: space-between; */
-}
-
-section {
-    display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr;
-    place-items: center center;
-    gap: 2.4em;
-}
-
-aside {
-    margin-left: 20em;
-}
-
-#cart {
-    float: right;
-    width: 250px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    height: auto;
-    overflow: hidden;
-}
-
-.card {
-    width: 18rem;
 }
