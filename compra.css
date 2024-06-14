@@ -18,7 +18,8 @@ header {
 }
 
 button {
-    background-color: #008CBA; /* Blue */
+    background-color: #008CBA;
+    /* Blue */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -78,10 +79,6 @@ header a:hover {
     transform: scale(1.2);
 }
 
-.menu {
-    margin-right: 10em;
-}
-
 .menu a {
     margin: 1.3em;
 }
@@ -102,7 +99,7 @@ header a:hover {
     margin-left: 20px;
 }
 
-.button{
+.button {
     background-color: #5b6334;
     font-size: 25px;
     border: 1px solid transparent;
@@ -126,130 +123,191 @@ footer h2 {
     color: aliceblue;
 }
 
-form input {
-    border: 1px solid transparent;
-    border-radius: 5px;
-    padding: 3px;
-    outline: none;
-}
-
-#ENVIAR {
-    border: 1px solid #b4ba94;
-    border-radius: 8px;
-    width: 4em;
-}
-
-form {
-    margin-right: 200px;
-    font-size: 15px;
-    width: 500px;
-}
-
-.box1 {
-    height: 300px;
-}
-
-.linha1 {
-    margin: 20px 0;
-}
-
-.linha2 {
-    margin-bottom: 20px;
-}
-
-.linha3 {
-    margin-left: 20px;
-    align-self: flex-start;
-}
-
-.linha3 i {
-    color: aliceblue;
-    font-size: 20px;
-    padding: 5px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-}
-
-.linha {
-    margin: 20px 0;
-    margin-left: 100px;
-}
-
-.home h1 {
-    text-align: center;
-}
-
-.home #deBaixo {
-    margin-bottom: 40px;
-}
-
-.quebra{
-    width: 100%;
-    height: 350px;
-    background-color: #5b6334;
-    display: flex;
-    justify-content: center;
-}
-
-.cor1 {
-    background-color: #b4ba94;
-    height: 280px;
-    text-align: center;
-    width: 70%;
-    align-self: center;
-    border: 1px solid transparent;
-    border-radius: 30px;
-    justify-content: center;
-    padding: 10px;
-}
-
-.cor1 h1{
-    font-size: 60px
-}
-
-.cor1 p{
-    font-size: 20px;
-    font-family: "Montserrat", sans-serif;
-}
-
-.d-block {
-    height:900px;
-    width: auto;
-}
-
 
 /* COMPRA */
 
 main {
     margin-top: 130px;
-    display: flex;
-    /* justify-content: space-between; */
 }
 
 section {
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(4, 350px);
+    grid-template-areas:
+        "item1 item2 item3"
+        "item4 item5 item6"
+        "item7 item8 item9";
     place-items: center center;
-    gap: 2.4em;
+    gap: 5em;
+    margin: 0 0 5em 20em;
 }
 
 aside {
-    margin-left: 20em;
+    text-align: center;
+}
+
+aside ul {
+    border: 0.1px black solid;
+}
+
+aside li {
+    list-style: none;
+}
+
+aside button {
+    margin-top: 2em;
 }
 
 #cart {
-    float: right;
-    width: 250px;
-    padding: 10px;
-    border: 1px solid #ddd;
     height: auto;
     overflow: hidden;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: 18rem;
+    border: black 2px solid;
+}
+
+i {
+    margin-left: 2em;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+}
+
+.item6 {
+    grid-area: item6;
+}
+
+.item7 {
+    grid-area: item7;
+}
+
+.item8 {
+    grid-area: item8;
+}
+
+.item9 {
+    grid-area: item9;
+}
+
+
+
+/* BARRA LATERAL */
+
+.barra-lateral {
+    height: 89.5vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(230, 230, 230);
+    overflow: scroll;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left: 1px solid black;
+}
+
+.barra-lateral .conteudo-barra {
+    text-align: left;
+}
+
+.barra-lateral .conteudo-barra ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.barra-lateral .conteudo-barra ul li {
+    padding: 8px 0;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.barra-lateral .conteudo-barra h2 {
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.aberto {
+    margin-top: 130px;
+    width: 300px;
+}
+
+.fechado {
+    width: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        width: 100%;
+        font-size: .4em;
+    }
+
+    main {
+        margin-top: 50px;
+    }
+
+    section {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1em;
+        margin-right: 200em;
+        margin-left: 3em;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .logo img {
+        width: 1px;
+        height: 1px;
+    }
+
+    .card {
+        width: auto;
+    }
+
+   .aberto {
+        width: 100%;
+    }
+
+   .fechado {
+        width: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    button {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
 }
