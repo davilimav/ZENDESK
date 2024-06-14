@@ -7,7 +7,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-
+    background-color: #b4ba94;
 }
 
 header {
@@ -18,7 +18,7 @@ header {
 }
 
 button {
-    background-color: #008CBA; /* Blue */
+    background-color: #0c7c2b; /* Blue */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -223,18 +223,13 @@ form {
 
 /* COMPRA */
 
-main {
-    margin-top: 130px;
-    display: flex;
-    /* justify-content: space-between; */
-}
-
 section {
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1fr ;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr ;
     grid-template-rows: 1fr 1fr 1fr;
     place-items: center center;
-    gap: 2.4em;
+    gap: 5em;
+    margin-left: 15em;
 }
 
 aside {
@@ -246,10 +241,25 @@ aside {
     width: 250px;
     padding: 10px;
     border: 1px solid #ddd;
-    height: auto;
     overflow: hidden;
+    height: auto;
+    background-color: #ffffff;
 }
 
 .card {
     width: 18rem;
+    background-color: #333;
+}
+
+.container2 {
+    margin-top: 130px;
+    display: flex;
+    height: 100vh;
+}
+
+.nada {
+    height: 30em;
+}
+main {
+    background-color: #b4ba94;
 }
