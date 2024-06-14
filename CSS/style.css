@@ -113,6 +113,7 @@ footer {
     background-color: #5b6334;
     color: aliceblue;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -214,6 +215,12 @@ form {
     height: 900px;
     width: auto;
 }
+
+footer i {
+    margin: 0;
+}
+
+/* RESPONSIVIDADE */
 
 @media screen and (max-width: 768px) {
 

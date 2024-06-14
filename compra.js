@@ -1,6 +1,13 @@
 const products = [
-    { id: 'cadeira', name: 'Cadeira Reutilizada', price: 150 },
-    { id: 'mesa', name: 'Mesa Reutilizada', price: 300 }
+    { id: 'cadeira1', name: 'Cadeira rústica', price: 99 },
+    { id: 'cadeira2', name: 'Cadeira jantar', price: 139 },
+    { id: 'cadeira3', name: 'Cadeira alicia', price: 110 },
+    { id: 'cadeira4', name: 'cadeira lalá', price: 100 },
+    { id: 'mesa1', name: 'Mesa tampo redondo', price: 150 },
+    { id: 'mesa2', name: 'Mesa barca', price: 185 },
+    { id: 'mesa3', name: 'Mesa de jantar com cadeiras', price: 500 },
+    { id: 'mesa4', name: 'Mesa cone', price: 80 },
+    { id: 'mesa5', name: 'Mesa clássica', price: 100 },
 ];
 
 let cart = [];
@@ -34,16 +41,6 @@ function checkout() {
     updateCart();
 }
 
-// function toggleCartao() {
-//     var conteudoCartao = document.getElementById("conteudoCartao");
-//     if (conteudoCartao.style.display === "none") {
-//       conteudoCartao.style.display = "block";
-//     } else {
-//       conteudoCartao.style.display = "none";
-//     }
-//   }
-
-
 function abrirBarraLateral() {
     var barraLateral = document.getElementById("minhaBarraLateral");
     var conteudoPrincipal = document.querySelector(".conteudo-principal");
@@ -56,4 +53,21 @@ function abrirBarraLateral() {
         barraLateral.classList.add("aberto");
         conteudoPrincipal.style.marginLeft = "250px";
     }
+}
+
+
+function updateCart() {
+    const cartList = document.getElementById('cartList');
+    const totalElement = document.getElementById('total');
+    cartList.innerHTML = '';
+    let total = 0;
+
+    cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - R$ ${item.price.toFixed(2)}`; // Adicionando o preço formatado com duas casas decimais
+        cartList.appendChild(li);
+        total += item.price;
+    });
+
+    totalElement.textContent = `Total: R$ ${total.toFixed(2)}`; // Exibindo o total formatado com duas casas decimais na barra lateral
 }
