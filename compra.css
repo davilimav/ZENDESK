@@ -163,6 +163,7 @@ aside button {
     overflow: hidden;
     height: auto;
     background-color: #ffffff;
+    background-color: black;
 }
 
 .card {
@@ -171,15 +172,15 @@ aside button {
     align-items: center;
     text-align: center;
     width: 18rem;
-    border: black 2px solid;
 }
 
 i {
     margin-left: 2em;
     font-size: 24px;
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
-}
+    }
+
 
 .item1 {
     grid-area: item1;

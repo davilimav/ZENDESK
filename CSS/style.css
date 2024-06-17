@@ -220,6 +220,14 @@ footer i {
     margin: 0;
 }
 
+.cadastro{
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: #7a8160;
+    padding: 10px;
+    color: white;
+  }
+
 /* RESPONSIVIDADE */
 
 @media screen and (max-width: 768px) {
